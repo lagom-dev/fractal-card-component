@@ -1,0 +1,13 @@
+{
+  "name": "dev-valtech",
+  "version": "0.1.0",
+  "dependencies": {
+    "@frctl/fractal": "^1.1.7"
+  },
+  "devDependencies": {
+    "@frctl/handlebars": "^1.1.4",
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.1"
+  }
+}

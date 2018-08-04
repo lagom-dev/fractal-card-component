@@ -1,0 +1,26 @@
+title: Card
+loading-gif: /dev-valtech/images/blank.gif
+variants:
+- name: slim
+  context:
+    width: 220px
+    height: 460px
+- name: medium
+  context:
+    width: 360px
+    height: 460px
+- name: large
+  context:
+    width: 947px
+    height: 460px
+- name: mobile
+  context:
+    width: 220px
+    height: 220px
+    
+    
+
+
+
+
+
