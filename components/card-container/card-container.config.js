@@ -6,79 +6,15 @@ module.exports = {
       "cities": [
         {
           "name": "london",
-          "title": "london",
-          "size": "slim",
-          "text": "The capital of england"
-        },
-        {
-          "name": "london",
-          "title": "london",
-          "size": "slim",
-          "text": "The capital of england"
-        },
-        {
-          "name": "london",
-          "title": "london",
-          "size": "slim",
-          "text": "The capital of england"
-        },
-        {
-          "name": "london",
-          "title": "london",
-          "size": "slim",
-          "text": "The capital of england"
-        },
-        {
-          "name": "london",
-          "title": "london",
-          "size": "slim",
-          "text": "The capital of england"
-        },
-        {
-          "name": "london",
-          "title": "london",
-          "size": "slim",
-          "text": "The capital of england"
-        },
-        {
-          "name": "london",
-          "title": "london",
-          "size": "slim",
-          "text": "The capital of england"
-        },
-        {
-          "name": "london",
-          "title": "london",
-          "size": "slim",
-          "text": "The capital of england"
-        },
-        {
-          "name": "london",
-          "title": "london",
+          "pre-title": "England",
+          "title": "London",
           "size": "slim",
           "text": "The capital of england"
         },
         {
           "name": "paris",
-          "title": "paris",
-          "size": "large",
-          "text": "The capital of france"
-        },
-        {
-          "name": "paris",
-          "title": "paris",
-          "size": "large",
-          "text": "The capital of france"
-        },
-        {
-          "name": "paris",
-          "title": "paris",
-          "size": "large",
-          "text": "The capital of france"
-        },
-        {
-          "name": "paris",
-          "title": "paris",
+          "pre-title": "France",
+          "title": "Paris",
           "size": "large",
           "text": "The capital of france"
         }

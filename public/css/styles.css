@@ -4,23 +4,24 @@
   display: inline-flex;
   border-radius: 8px;
   min-width: 280px;
+  min-height: 280px;
   font-family: 'Open Sans', sans-serif;
   position: relative;
 }
 
 .card__large {
-  width: 947px;
-  height: 460px;
+  max-width: 947px;
+  max-height: 460px;
 }
 
 .card__medium {
-  width: 460px;
-  height: 460px;
+  max-width: 460px;
+  max-height: 360px;
 }
 
 .card__slim {
-  width: 220px;
-  height: 460px;
+  max-width: 220px;
+  max-height: 460px;
 }
 
 .card__overlay {
@@ -34,7 +35,7 @@
   object-fit: cover;
 }
 
-.card__text, .card__title, .card__button {
+.card__text, .card__pretitle, .card__title, .card__button {
   color: #fff;
   position: absolute;
   font-size: 14px;
@@ -42,7 +43,13 @@
   text-align: center;
   bottom: -100px;
   opacity: 0;
-  transition: bottom 2s linear, opacity 1s ease-in-out;
+  transition: bottom 1s linear, opacity 1s ease-in-out;
+}
+
+.card__pretitle {
+  opacity: 1;
+  bottom: 130px;
+  transition: bottom 1s linear;
 }
 
 .card__title {
@@ -51,10 +58,10 @@
   font-size: 28px;
   font-weight: bold;
   z-index: 9;
-  transition: bottom 2s linear;
+  transition: bottom 1s linear;
 }
 
-.card:hover .card__text, .card__large:hover .card__text, .card__medium:hover .card__text, .card__slim:hover .card__text, .card__overlay:hover .card__text, .card__image:hover .card__text, .card:hover .card__title, .card__large:hover .card__title, .card__medium:hover .card__title, .card__slim:hover .card__title, .card__overlay:hover .card__title, .card__image:hover .card__title, .card:hover .card__button, .card__large:hover .card__button, .card__medium:hover .card__button, .card__slim:hover .card__button, .card__overlay:hover .card__button, .card__image:hover .card__button {
+.card:hover .card__text, .card__large:hover .card__text, .card__medium:hover .card__text, .card__slim:hover .card__text, .card__overlay:hover .card__text, .card__image:hover .card__text, .card:hover .card__pretitle, .card__large:hover .card__pretitle, .card__medium:hover .card__pretitle, .card__slim:hover .card__pretitle, .card__overlay:hover .card__pretitle, .card__image:hover .card__pretitle, .card:hover .card__title, .card__large:hover .card__title, .card__medium:hover .card__title, .card__slim:hover .card__title, .card__overlay:hover .card__title, .card__image:hover .card__title, .card:hover .card__button, .card__large:hover .card__button, .card__medium:hover .card__button, .card__slim:hover .card__button, .card__overlay:hover .card__button, .card__image:hover .card__button {
   transition: 1s ease-in-out;
   bottom: 74px;
   opacity: 1;
@@ -63,6 +70,11 @@
 .card:hover .card__title, .card__large:hover .card__title, .card__medium:hover .card__title, .card__slim:hover .card__title, .card__overlay:hover .card__title, .card__image:hover .card__title {
   transition: 1s ease-in-out;
   bottom: 185px;
+}
+
+.card:hover .card__pre-title, .card__large:hover .card__pre-title, .card__medium:hover .card__pre-title, .card__slim:hover .card__pre-title, .card__overlay:hover .card__pre-title, .card__image:hover .card__pre-title {
+  transition: 1s ease-in-out;
+  bottom: 200px;
 }
 
 .card__button {
