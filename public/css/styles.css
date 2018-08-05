@@ -48,7 +48,7 @@
 
 .card__pretitle {
   opacity: 1;
-  bottom: 130px;
+  bottom: 170px;
   transition: bottom 1s linear;
 }
 
@@ -72,9 +72,9 @@
   bottom: 185px;
 }
 
-.card:hover .card__pre-title, .card__large:hover .card__pre-title, .card__medium:hover .card__pre-title, .card__slim:hover .card__pre-title, .card__overlay:hover .card__pre-title, .card__image:hover .card__pre-title {
+.card:hover .card__pretitle, .card__large:hover .card__pretitle, .card__medium:hover .card__pretitle, .card__slim:hover .card__pretitle, .card__overlay:hover .card__pretitle, .card__image:hover .card__pretitle {
   transition: 1s ease-in-out;
-  bottom: 200px;
+  bottom: 244px;
 }
 
 .card__button {
@@ -87,6 +87,14 @@
   padding: 10px 0 0 0;
   text-decoration: none;
   opacity: 0;
+}
+
+.card__large .card__button {
+  left: 43%;
+}
+
+.card__slim .card__button {
+  left: 29%;
 }
 
 .card:hover .card__button, .card__large:hover .card__button, .card__medium:hover .card__button, .card__slim:hover .card__button, .card__overlay:hover .card__button, .card__image:hover .card__button {

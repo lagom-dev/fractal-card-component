@@ -12,6 +12,14 @@
     opacity: 0;
 }
 
+.card__large .card__button {
+    left: 43%;
+}
+
+.card__slim .card__button {
+    left: 29%;
+}
+
 .card:hover .card__button {
     transition: 1s ease-in-out;;
     opacity: 1;

@@ -53,7 +53,7 @@
     &__pretitle { 
       @extend .card__text; 
       opacity: 1;
-      bottom: 130px;
+      bottom: 170px;
       transition: bottom 1s linear;
    }
 
@@ -69,10 +69,10 @@
     
   }
 
-  .card:hover .card__text {
-    transition: 1s ease-in-out;
-    bottom: 74px;
-    opacity: 1;
+.card:hover .card__text {
+  transition: 1s ease-in-out;
+  bottom: 74px;
+  opacity: 1;
 }
 
 .card:hover .card__title {
@@ -80,9 +80,9 @@
   bottom: 185px;
 }
 
-.card:hover .card__pre-title {
+.card:hover .card__pretitle {
   transition: 1s ease-in-out;
-  bottom: 200px;
+  bottom: 244px;
 }
 
 
