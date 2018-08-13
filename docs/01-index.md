@@ -1,5 +1,4 @@
 ---
-title: Dev Valtech
+title: Card Components
 ---
-
-This is your index page. You can edit its contents at `docs/01-index.hbs`
+This is the component library for card components. **Feel free to look around!**
