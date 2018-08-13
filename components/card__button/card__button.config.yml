@@ -1,0 +1,20 @@
+title: Card-button
+context:
+  name: default
+  button-text: Explore more
+  button-size: medium
+variants:
+- name: large
+  context:
+    button-size: large
+- name: slim
+  context:
+    button-size: slim
+- name: medium
+  context:
+    button-size: medium
+
+
+
+
+

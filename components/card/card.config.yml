@@ -1,28 +1,47 @@
 title: Card
-loading-gif: /dev-valtech/images/blank.gif
+context: 
+  name: default
+  button-text: Explore More
+  button-size: medium
+  loading-gif: /dev-valtech/images/blank.gif
+  city: florianopolis
+  pre-title: Lorem
+  title: Ipsum
+  text: Lorem ipsun dolor sit a met lorem dolor sit a met factius lorem ipsun dolor sit a met ipsun lorem amet
+  size: medium
+  max-width: 360px
+  max-height: 460px
 variants:
 - name: slim
   context:
+    size: slim
+    button-size: slim
     display:
       max-width: 220px
-      max-height: 460px
+      max-height: 360px
 - name: medium
   context:
+    size: medium
+    button-size: medium
     display:
       max-width: 360px
       max-height: 460px
 - name: large
   context:
-   display:
+    size: large
+    button-size: large
+    display:
       max-width: 947px
       max-height: 460px
 - name: mobile
   context:
+    size: mobile
+    button-size: slim
     display:
-      max-width: 220px
-      max-height: 220px
-    
-    
+      max-width: 280px
+      max-height: 280px
+  
+  
 
 
 

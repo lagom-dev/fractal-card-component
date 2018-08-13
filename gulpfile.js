@@ -1,49 +1,50 @@
 var gulp = require('gulp');
-var sass = require('gulp-sass');
-var rename = require('gulp-rename');
+
+
+const fractal = require('./fractal');
+const sass = require('./sass');
+const logger = fractal.cli.console; // keep a reference to the fractal CLI console utility
 
 /*
- * Variables
+ * Start the Fractal server
+ *
+ * In this example we are passing the option 'sync: true' which means that it will
+ * use BrowserSync to watch for changes to the filesystem and refresh the browser automatically.
+ * Obviously this is completely optional!
+ *
+ * This task will also log any errors to the console.
  */
-// Sass Source
-var scssFiles = './components/styles.scss';
 
-// CSS destination
-var cssDest = './public/css';
-
-// Options for development
-var sassDevOptions = {
-  outputStyle: 'expanded'
-}
-
-// Options for production
-var sassProdOptions = {
-  outputStyle: 'compressed'
-}
+gulp.task('fractal:start', function(){
+    const server = fractal.web.server({
+        sync: true
+    });
+    server.on('error', err => logger.error(err.message));
+    return server.start().then(() => {
+        logger.success(`Fractal server is now running at ${server.url}`);
+    });
+});
 
 /*
- * Tasks
+ * Run a static export of the project web UI.
+ *
+ * This task will report on progress using the 'progress' event emitted by the
+ * builder instance, and log any errors to the terminal.
+ *
+ * The build destination will be the directory specified in the 'builder.dest'
+ * configuration option set above.
  */
-// Task 'sassdev' - Run with command 'gulp sassdev'
-gulp.task('sassdev', function() {
-  return gulp.src(scssFiles)
-    .pipe(sass(sassDevOptions).on('error', sass.logError))
-    .pipe(gulp.dest(cssDest));
-});
 
-// Task 'sassprod' - Run with command 'gulp sassprod'
-gulp.task('sassprod', function() {
-  return gulp.src(scssFiles)
-    .pipe(sass(sassProdOptions).on('error', sass.logError))
-    .pipe(rename('style.min.css'))
-    .pipe(gulp.dest(cssDest));
-});
-
-// Task 'watch' - Run with command 'gulp watch'
-gulp.task('watch', function() {
-  gulp.watch(scssFiles, ['sassdev', 'sassprod']);
+gulp.task('fractal:build', function(){
+    const builder = fractal.web.builder();
+    builder.on('progress', (completed, total) => logger.update(`Exported ${completed} of ${total} items`, 'info'));
+    builder.on('error', err => logger.error(err.message));
+    return builder.build().then(() => {
+        logger.success('Fractal build completed!');
+    });
 });
 
 // Default task - Run with command 'gulp'
-gulp.task('default', ['sassdev', 'sassprod', 'watch']);
+gulp.task('default', ['fractal:start', 'sassdev', 'sassprod', 'watch']);
+
 

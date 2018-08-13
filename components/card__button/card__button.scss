@@ -1,0 +1,43 @@
+$left-slim: 26%;
+$left-large: 43%;
+$left-medium: 35%;
+
+.card__button {
+    @extend .card__text; 
+    bottom: 21px !important;
+    width: 132px;
+    height: 30px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 10px 0 0 0;
+    text-decoration: none;
+    opacity: 0;
+    left: $left-slim;
+    
+
+    &--medium {
+        @extend .card__button;
+        @media screen and (min-width: 680px) {
+            left: $left-medium;
+        }
+    }
+
+    &--large {
+        @extend .card__button;
+        @media screen and (min-width: 680px) {
+            left: $left-large;
+        }
+    }
+    
+    &--slim, &--mobile {
+        @extend .card__button;
+        @media screen and (min-width: 680px) {
+            left: $left-slim;
+        }
+    }
+
+    &:hover {
+        transition: 1s ease-in-out;
+        opacity: 1;
+    }
+}
