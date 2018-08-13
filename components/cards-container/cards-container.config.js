@@ -2,7 +2,7 @@ module.exports = {
   "title": "Card container component",
   "context": {
     "name": "default",
-    "loading-gif": "/dev-valtech/images/blank.gif",
+    "loading-gif": "/_assets/images/blank.gif",
     "button-text": "Explore More",
     "title": "Our cities",
     "cities": [

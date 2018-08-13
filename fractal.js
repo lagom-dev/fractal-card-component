@@ -13,7 +13,7 @@ const fractal = module.exports = require('@frctl/fractal').create();
 /*
  * Give your project a title.
  */
-fractal.set('project.title', 'Dev Valtech');
+fractal.set('project.title', 'Cards Components');
 
 /*
  * Tell Fractal where to look for components.
@@ -24,12 +24,13 @@ fractal.components.set('path', path.join(__dirname, 'components'));
  * Tell Fractal where to look for documentation pages.
  */
 fractal.docs.set('path', path.join(__dirname, 'docs'));
-
+// destination for the static export
+fractal.web.set('builder.dest', 'build');
 /*
  * Tell the Fractal web preview plugin where to look for static assets.
  */
 fractal.web.set('static.path', path.join(__dirname, 'public'));
-fractal.web.set('static.mount', 'dev-valtech');
+fractal.web.set('static.mount', '_assets');
 
 fractal.components.set('default.preview', '@preview');
 

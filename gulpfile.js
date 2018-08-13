@@ -47,4 +47,7 @@ gulp.task('fractal:build', function(){
 // Default task - Run with command 'gulp'
 gulp.task('default', ['fractal:start', 'sassdev', 'sassprod', 'watch']);
 
+// Build task - Run with command 'gulp build'
+gulp.task('build', ['fractal:build','fractal:start', 'sassdev', 'sassprod', 'watch']);
+
 

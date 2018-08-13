@@ -3,7 +3,7 @@ context:
   name: default
   button-text: Explore More
   button-size: medium
-  loading-gif: /dev-valtech/images/blank.gif
+  loading-gif: /_assets/images/blank.gif
   city: florianopolis
   pre-title: Lorem
   title: Ipsum
