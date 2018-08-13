@@ -1,5 +1,5 @@
 Fractal Cards Component
 
-$ sudo npm install --no-audit
-$ sudo gulp build
+$ npm install --no-audit
+$ gulp build
 Server will run on localhost:3000 
