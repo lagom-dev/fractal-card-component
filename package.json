@@ -1,6 +1,9 @@
 {
-  "name": "dev-valtech",
+  "name": "fractal-cards-component",
+  "description": "Fractal cards component",
+  "licence": "MIT",
   "version": "0.1.0",
+  "repository": "https://github.com/lagom-dev/fractal-card-component",
   "dependencies": {
     "@frctl/fractal": "^1.1.7"
   },
